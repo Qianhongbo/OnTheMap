@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		481244D42791E72A00D7D86E /* StudentLocationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481244D32791E72A00D7D86E /* StudentLocationsModel.swift */; };
 		487461F2278A80D800AAA0FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487461F1278A80D800AAA0FC /* AppDelegate.swift */; };
 		487461F4278A80D800AAA0FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487461F3278A80D800AAA0FC /* SceneDelegate.swift */; };
 		487461F6278A80D800AAA0FC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487461F5278A80D800AAA0FC /* LoginViewController.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		481244D32791E72A00D7D86E /* StudentLocationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocationsModel.swift; sourceTree = "<group>"; };
 		487461EE278A80D800AAA0FC /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		487461F1278A80D800AAA0FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		487461F3278A80D800AAA0FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,24 +133,25 @@
 		48746208278A817300AAA0FC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				48D68CFE278CEB8F00E2502B /* Udacity Requests */,
+				48D68CFE278CEB8F00E2502B /* Requests */,
 				48D68CE1278BAA6700E2502B /* Udacity Client */,
-				48D68CE0278BAA4C00E2502B /* Udacity Responses */,
+				48D68CE0278BAA4C00E2502B /* Responses */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		48D68CE0278BAA4C00E2502B /* Udacity Responses */ = {
+		48D68CE0278BAA4C00E2502B /* Responses */ = {
 			isa = PBXGroup;
 			children = (
 				48D68CE2278BAAA300E2502B /* StudentLocations.swift */,
+				481244D32791E72A00D7D86E /* StudentLocationsModel.swift */,
 				48D68CFC278CB14000E2502B /* PostStudentLocation.swift */,
 				48D68D01278CEED500E2502B /* LoginResponse.swift */,
 				48D68D03278CF7FC00E2502B /* UserProfileResponse.swift */,
 				48D68D09278D66A800E2502B /* PublicUserData.swift */,
 				48F47CB4278EC6820096060F /* PutStudentLocation.swift */,
 			);
-			path = "Udacity Responses";
+			path = Responses;
 			sourceTree = "<group>";
 		};
 		48D68CE1278BAA6700E2502B /* Udacity Client */ = {
@@ -159,13 +162,13 @@
 			path = "Udacity Client";
 			sourceTree = "<group>";
 		};
-		48D68CFE278CEB8F00E2502B /* Udacity Requests */ = {
+		48D68CFE278CEB8F00E2502B /* Requests */ = {
 			isa = PBXGroup;
 			children = (
 				48D68CFF278CEBAF00E2502B /* LoginRequest.swift */,
 				48D68D0B278D713B00E2502B /* LocationData.swift */,
 			);
-			path = "Udacity Requests";
+			path = Requests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +258,7 @@
 				48D68D04278CF7FC00E2502B /* UserProfileResponse.swift in Sources */,
 				48D68D00278CEBAF00E2502B /* LoginRequest.swift in Sources */,
 				487461F2278A80D800AAA0FC /* AppDelegate.swift in Sources */,
+				481244D42791E72A00D7D86E /* StudentLocationsModel.swift in Sources */,
 				48F47CB5278EC6820096060F /* PutStudentLocation.swift in Sources */,
 				48D68CE3278BAAA300E2502B /* StudentLocations.swift in Sources */,
 				487461F4278A80D800AAA0FC /* SceneDelegate.swift in Sources */,

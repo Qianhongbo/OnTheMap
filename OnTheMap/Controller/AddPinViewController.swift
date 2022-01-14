@@ -35,6 +35,7 @@ class AddPinViewController: UIViewController {
         let location = self.textField.text
         CLGeocoder().geocodeAddressString(location ?? "") { mark, error in
             guard let mark = mark else {
+                self.activityIndicator.stopAnimating()
                 self.showAlertViewController(title: "Search Failed", message: "Can not find the location.")
                 return
             }

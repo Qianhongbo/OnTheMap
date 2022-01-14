@@ -39,7 +39,6 @@ class LoginViewController: UIViewController {
                 self.setLoggingIn(status: false)
             }
         }
-//        self.performSegue(withIdentifier: "loginVC", sender: nil)
     }
     
     @IBAction func signUpTapped(_ sender: Any) {

@@ -14,7 +14,6 @@ class MapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    var locations: [student] = []
     var annotations = [MKPointAnnotation]()
     var postStatus: Bool!
     
@@ -22,7 +21,6 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         self.mapView.delegate = self
         self.setNavigationButton()
-        self.updateStudentLocations()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,9 +35,11 @@ class MapViewController: UIViewController {
     }
     
     func updateStudentLocations() {
+        mapView.removeAnnotations(mapView.annotations)
+        self.annotations = []
         UDacityAPI.getStudentLocations { result, error in
             if error == nil {
-                self.locations = Array(result[0..<100])
+                StudentLocationsModel.studentLocations = result
                 self.createAnnotations()
                 self.mapView.addAnnotations(self.annotations)
                 self.activityIndicator.stopAnimating()
@@ -51,7 +51,7 @@ class MapViewController: UIViewController {
     }
     
     func createAnnotations() {
-        for dictionary in self.locations {
+        for dictionary in StudentLocationsModel.studentLocations {
             let latitude = CLLocationDegrees(dictionary.latitude)
             let longitude = CLLocationDegrees(dictionary.longitude)
             let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
